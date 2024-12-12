@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.zaril-auth-text {
+  margin-bottom: 35px;
+  color: #4facfe;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  transition: all 0.5s ease;
+}
+
+.image-container {
+  flex: 1;
+  background: url("https://i.pinimg.com/736x/2a/ca/e3/2acae3dde872b05c6e66a723954e9f98.jpg")
+    no-repeat center center;
+  background-size: cover;
+  transition: order 0.5s ease, transform 0.5s ease;
+}
+
+.form-container {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-container form {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container form .input-container {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.form-container form .input-container input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-container form .input-container input:focus {
+  outline: none;
+  background: #e0f7fa;
+  box-shadow: 0 0 5px #4facfe;
+}
+
+.form-container form .input-container label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.form-container form .input-container input:focus + label,
+.form-container form .input-container input:not(:placeholder-shown) + label {
+  top: 0;
+  transform: translateY(-100%);
+  font-size: 1rem;
+  color: #4facfe;
+}
+
+.form-container form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #4facfe;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-container form button:hover {
+  background: #095e8f;
+}
+
+.form-container .toggle {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.form-container .toggle:hover {
+  color: #333;
+}
+
+/* Adjust layout for register mode */
+.container.register-mode .image-container {
+  order: 2;
+  transform: translateX(100px);
+}
+
+.container.register-mode .form-container {
+  order: 1;
+}
+
+.input-container .toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #aaa;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.input-container .toggle-password:hover {
+  color: #333;
+}
+
+.input-container .toggle-password {
+  z-index: 1;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .image-container {
+    height: 200px;
+  }
+}
+
+@media (max-width: 478px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .image-container {
+    height: 200px;
+  }
+}

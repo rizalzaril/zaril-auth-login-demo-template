@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZarilAuth Template</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-container"></div>
+      <div class="form-container">
+        <h3 class="zaril-auth-text">ZarilAuth</h3>
+        <h2 id="form-title"></h2>
+        <form id="form">
+          <div class="input-container">
+            <input type="text" placeholder=" " required />
+            <label>Username</label>
+          </div>
+          <div class="input-container">
+            <input
+              type="password"
+              class="password-input"
+              placeholder=" "
+              required
+            />
+            <label>Password</label>
+            <span class="toggle-password">
+              <i class="fas fa-eye"></i>
+            </span>
+          </div>
+          <button type="submit">Sign in</button>
+        </form>
+        <div class="toggle" id="toggle">
+          Don't have an account? Register here.
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
